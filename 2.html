@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<script>
+$(document).ready(
+	function(){
+		var k = 0;
+		var i = 0;    
+		$("#rect2").click(
+			function(){
+				i = i + 20;
+				k = k + 1;
+				$("#rect1").css("border-radius",i);
+				$("#text1").html("clicking to be smother");
+		$("#fuck").html(k);
+		}
+	);
+		$("#rect3").click(
+			function(){
+				i = i - 20;
+				k = k + 1;
+				$("#rect1").css("border-radius",i);
+				$("#text1").html("clicking to be edgier");
+		$("#fuck").html(k);
+		}
+	);
+});
+</script>
+
+<style>
+.rects3 {
+	width:300px;
+	height:100px;
+	background:#333222;
+	float: right;
+}
+
+.rects2 {
+	width:300px;
+	height:100px;
+	background:#333;
+	float: left;
+}
+
+.rects {
+	width:400px;
+	height:400px;
+	background:#333;
+	margin:auto;
+	clear: none;
+}
+
+#rect1 {
+	background:#fa23bc;
+}
+
+#text1 {
+	padding-top: 150px;
+	text-align: center;
+}
+
+#fuck {
+	text-align: center;
+}
+	
+</style>
+
+<body>
+<div id='rect3' class='rects3'>  </div>	
+<div id='rect2' class='rects2'>  </div>	
+<div id='rect1' class='rects'> <p id='text1'>8</p> </br> <p id='fuck'>f</P> </div>
+</body>
+</html>
